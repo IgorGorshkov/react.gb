@@ -1,0 +1,18 @@
+.App {
+    text-align: center;
+    height: 100vh;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+.app-dark {
+    background-color: #282c34;
+    color: white;
+}
+
+.app-light {
+    background-color: white;
+    color: #282c34;
+}
