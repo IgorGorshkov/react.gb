@@ -1,0 +1,18 @@
+.input {
+    background-color: lightgrey;
+}
+
+.wrapper {
+    padding-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    background-color: green;
+}
+
+form {
+    gap: 12px;
+    display: flex;
+}
