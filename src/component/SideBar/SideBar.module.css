@@ -1,0 +1,14 @@
+.div {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: 100vh;
+  background-color: rgb(49, 166, 202);
+}
+
+.link {
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+  padding: 24px;
+}
