@@ -1,13 +1,40 @@
-import Message from './components/message/Message';
-import './App.css'
+import * as React from "react";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import { Messenger } from "./components/Messenger";
+import { Profile } from "./components/Profile";
+import { ChatOne } from "./components/ChatOne";
+import Main from "./components/Main";
+
+const Info = () => {
+  return (
+    <main>
+      <h2>Главная страница</h2>
+    </main>
+  );
+};
 
 function App() {
-  const msgProps = 'AppProps in Message component'
-  
   return (
     <div className="App">
-      <p>App component</p>
-      <Message name={msgProps ? msgProps : 'New message'}/>
+      <Routes>
+        <Route path="/" element={<Main />}>
+          <Route index element={<Info />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="chats" element={<Messenger />}>
+            <Route index element={<h2>Чат не выбран</h2>} />
+            <Route path=":chatId" element={<ChatOne />} />
+          </Route>
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>There's nothing here!</p>
+              </main>
+            }
+          />
+        </Route>
+      </Routes>
     </div>
   );
 }
