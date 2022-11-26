@@ -1,0 +1,10 @@
+.message {
+    /*color: red;*/
+    font-size: 1em;
+}
+
+.header {
+    font-weight: 200;
+    font-size: 2em;
+    color:#282c34;
+}
